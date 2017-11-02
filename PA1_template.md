@@ -119,11 +119,10 @@ for(i in 1:nrow(activityNew)){
 
 ```r
 totalSteps_x_DayNew <- aggregate(steps ~ date, data=activityNew, sum)
-hist(totalSteps_x_DayNew$steps, col = "green", xlab = "Total steps per day", ylim = c(0,30), main = "Total number of steps taken each day")
+hist(totalSteps_x_DayNew$steps, col = "darkblue", xlab = "Total steps per day", ylim = c(0,30), main = "Total number of steps taken each day")
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
-
 
 The mean didn’t change after the replacements of NAs.
 

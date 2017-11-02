@@ -89,9 +89,8 @@ for(i in 1:nrow(activityNew)){
 
 ```{r}
 totalSteps_x_DayNew <- aggregate(steps ~ date, data=activityNew, sum)
-hist(totalSteps_x_DayNew$steps, col = "green", xlab = "Total steps per day", ylim = c(0,30), main = "Total number of steps taken each day")
+hist(totalSteps_x_DayNew$steps, col = "darkblue", xlab = "Total steps per day", ylim = c(0,30), main = "Total number of steps taken each day")
 ```
-
 
 The mean didn’t change after the replacements of NAs.
 
@@ -131,8 +130,6 @@ plot<- ggplot(activity_by_date, aes(x = interval , y = steps, color = datetype))
        labs(title = "Average daily steps by type of date", x = "Interval", y = "Average number of steps") +
        facet_wrap(~datetype, ncol = 1, nrow=2)
 print(plot)
-
-
 ```
 
 
